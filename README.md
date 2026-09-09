@@ -77,7 +77,7 @@ The table below lists leading SaaS SSE vendors **sorted in descending order by c
 
 The table below lists top open-source projects **sorted in descending order by GitHub star count**:
 
-| Repository 📦 | GitHub Stars 🌟 | Description & SSE Role 🚀 |
+| Repository 📦 | GitHub_Stars 🌟 | Description & SSE Role 🚀 |
 | :--- | :--- | :--- |
 | **[Grafana](https://github.com/grafana/grafana)** | [<img src="https://img.shields.io/github/stars/grafana/grafana?style=social&color=white" alt="stars"/>](https://github.com/grafana/grafana/stargazers) | Operational dashboards and visualization for security metrics and logs. |
 | **[Prometheus](https://github.com/prometheus/prometheus)** | [<img src="https://img.shields.io/github/stars/prometheus/prometheus?style=social&color=white" alt="stars"/>](https://github.com/prometheus/prometheus/stargazers) | Systems monitoring and time-series alerting database. |
