@@ -1,497 +1,288 @@
-# Awesome-Secure-Service-Edge
+![Awesome Security Service Edge Banner](assets/banner.svg)
 
-## Top Security Service Edge (SSE) Ecosystem
+# 🛡️ Awesome Secure Service Edge (SSE)
 
-**Curated List of SaaS/Hosted Platforms & Open-Source GitHub Projects**
-*Focused on Secure Web Gateway (SWG), Zero Trust Network Access (ZTNA), CASB, DLP, DNS Security, Firewall-as-a-Service, Remote Browser Isolation & Cloud Security*
-**Last updated: September 2026**
+<p align="left">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Secure-Service-Edge/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Secure-Service-Edge?style=social" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Secure-Service-Edge/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Secure-Service-Edge?style=social" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Secure-Service-Edge/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Secure-Service-Edge?color=blue" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-This repository tracks notable **SaaS/hosted platforms** and **open-source projects** for **Security Service Edge (SSE)**. SSE converges cloud-delivered security capabilities such as secure web gateway, zero-trust access, cloud access security broker, data loss prevention, DNS security, threat protection and related policy enforcement.
+> **Curated Ecosystem of SaaS/Hosted Platforms & Open-Source Security Architecture**
+> *Comprehensive guide covering Secure Web Gateway (SWG), Zero Trust Network Access (ZTNA), Cloud Access Security Broker (CASB), Data Loss Prevention (DLP), DNS Security, Firewall-as-a-Service (FWaaS), Remote Browser Isolation (RBI), and Cloud Security.*
 
-**Examples** include Netskope One SSE, Zscaler Zero Trust Exchange, Cisco Secure Access/Umbrella, Palo Alto Prisma Access, Cloudflare One, Cato SASE/SSE, Forcepoint ONE, Skyhigh Security, Versa SSE and Lookout Security Platform. SSE is now a mature cloud-centric security category, with major vendors converging multiple access-security functions into integrated platforms. ([Gartner](https://www.gartner.com/en/documents/8192429))
+---
 
-**Open-source emphasis**: This section is heavily expanded with open-source projects for self-hosting, secure web gateways, DNS filtering, identity-aware proxies, ZTNA, VPN/overlay networking, authentication, policy enforcement, WAF, network security monitoring, DLP, observability and security analytics. There is **no single open-source project that provides feature-for-feature parity with the major commercial SSE suites**; instead, an enterprise-grade open-source SSE stack is normally assembled from several complementary components.
+## 📌 Executive Overview & SEO Index
 
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official project repositories.
+**Security Service Edge (SSE)** represents the security pillar of **Secure Access Service Edge (SASE)** architecture as defined by Gartner. SSE converges cloud-delivered security capabilities—such as **Secure Web Gateway (SWG)**, **Zero Trust Network Access (ZTNA)**, **Cloud Access Security Broker (CASB)**, **Data Loss Prevention (DLP)**, **DNS Security**, and **Remote Browser Isolation (RBI)**—into a unified cloud framework.
 
-## Table of Contents
+This repository tracks both **commercial enterprise SaaS solutions** and **open-source building blocks** for security architects, CISOs, DevOps, DevSecOps, and network engineers building enterprise security stacks.
 
-* [SaaS/Hosted Platforms](#saashosted-platforms)
-* [Open-Source GitHub Projects](#open-source-github-projects)
-* [Open-Source Zero Trust & ZTNA](#open-source-zero-trust--ztna)
-* [Open-Source Secure Web Gateway & Proxy](#open-source-secure-web-gateway--proxy)
-* [Open-Source DNS & Network Security](#open-source-dns--network-security)
-* [Open-Source Identity & Access Management](#open-source-identity--access-management)
-* [Open-Source DLP & Data Security](#open-source-dlp--data-security)
-* [Open-Source Security Monitoring & Analytics](#open-source-security-monitoring--analytics)
-* [Additional Strong Open-Source Options](#additional-strong-open-source-options)
-* [Commercial SSE → Open-Source Equivalents](#commercial-sse--open-source-equivalents)
-* [Frameworks for Building Custom SSE Systems](#frameworks-for-building-custom-sse-systems)
-* [How to Contribute](#how-to-contribute)
-* [Disclaimer](#disclaimer)
+---
 
-## SaaS/Hosted Platforms
+## 📑 Table of Contents
 
-| Platform | Description | Starting Pricing | Free Tier / Trial Limit |
-| :--- | :--- | :--- | :--- |
-| **[Netskope One SSE](https://www.netskope.com/products/security-service-edge)** | Cloud-delivered SSE platform combining SWG, CASB, DLP, zero-trust access and threat protection with granular policy and data-centric controls. | ~$4.00 / user / month ($48 / user / year base SWG + CASB package) | 14-day free trial (Netskope Private Access Test Drive & PoV hands-on lab for up to 50 test users) |
-| **[Zscaler Zero Trust Exchange](https://www.zscaler.com/products/zero-trust-exchange)** | Cloud-native security platform providing secure internet and private-application access, SWG, CASB, DLP and zero-trust controls. | ~$2.40 / user / month ($72 / user / year starting tier for ZIA Business package) | 90-day free trial (ZIA Cloud Sandbox/DLP evaluation, or 30-day PoC tenant with full feature access) |
-| **[Cisco Secure Access / Cisco Umbrella](https://umbrella.cisco.com/)** | Cisco's SSE capabilities combine Secure Internet Access and Secure Private Access, with DNS security, SWG, CASB, DLP, malware protection and ZTNA capabilities. | $2.25 / user / month (DNS Security Essentials starting tier; $4.00 / user / month for SIG) | 14-day free trial (standard self-service trial up to 50 users; 21 days for MSP partners) |
-| **[Palo Alto Networks Prisma Access](https://www.paloaltonetworks.com/sase/access)** | Cloud-delivered security platform combining secure access, SWG, ZTNA, cloud security, threat prevention and enterprise networking. | ~$8.00 / user / month ($96 / user / year starting tier for base ZTNA/SWG package) | 30-day free trial (Ultimate Test Drive hands-on lab and guided PoC tenant evaluation) |
-| **[Cloudflare One](https://www.cloudflare.com/zero-trust/)** | Zero Trust/SASE platform combining secure web access, private application access, DNS filtering, network security, browser isolation and data protection. | $0 / month (Free tier) / $7.00 / user / month (Standard Pay-as-you-go tier) | Free forever for up to 50 users (includes ZTNA, SWG, WARP client, DEX, basic CASB/DLP, 24h log retention) |
-| **[Cato Networks](https://www.catonetworks.com/)** | Cloud-native SASE platform combining networking and security services including SWG, CASB, ZTNA, FWaaS and SD-WAN. | ~$6.00 / user / month (ZTNA SDP remote user starting tier) or ~$100.00 / site / month | 30-day free trial (Proof of Concept tenant with full SASE/SSE features enabled across all test sites) |
-| **[Forcepoint ONE](https://www.forcepoint.com/product/forcepoint-one)** | Cloud-native SSE platform focused on SWG, CASB, DLP, private application access and data-centric security. | ~$4.58 / user / month ($55 / user / year starting tier for cloud modules, min 100 users) | 30-day free trial (guided evaluation PoC environment for up to 100 test users) |
-| **[Skyhigh Security](https://www.skyhighsecurity.com/)** | SSE platform emphasizing SWG, CASB, DLP, zero-trust access, cloud security and data protection. | ~$5.00 / user / month ($60 / user / year starting tier for base Cloud Protection/SWG suite) | 14-day free trial (interactive guided PoC lab environment with pre-configured DLP & CASB policies) |
-| **[Versa SASE](https://www.versa-networks.com/sase/)** | Integrated SASE/SSE platform combining SD-WAN, SWG, CASB, ZTNA, firewall and security analytics. | $7.50 / user / month (entry subscription tier for ZTNA and cloud security services) | 90-day free trial (evaluation tenant capped at up to 100 users or enterprise PoC trial) |
-| **[Lookout Secure Cloud Access / SSE](https://www.lookout.com/products/security-service-edge)** | Cloud security platform emphasizing secure access, data protection, DLP, CASB and zero-trust capabilities. | ~$4.00 / user / month (starting tier for base cloud access and mobile endpoint protection) | 90-day free trial (for Mobile Endpoint & Cloud Access evaluation up to 50 devices/users) |
-| **[iboss](https://www.iboss.com/)** | Cloud-delivered SSE/SASE platform providing SWG, ZTNA, CASB, DLP and secure internet access. | ~$2.50 / user / month ($30 / user / year starting tier for Zero Trust Core package) | 30-day free trial (evaluation PoC license for cloud gateway & zero-trust access) |
-| **[FortiSASE](https://www.fortinet.com/products/sase)** | Cloud-delivered SASE/SSE capabilities including SWG, ZTNA, CASB, FWaaS and endpoint/security integration. | $7.50 / user / month ($90 / user / year starting tier for Standard package, min 50 users) | 30-day free trial (PoC tenant managed via Fortinet partner for minimum 50 user evaluation) |
-| **[Cloudi-Fi](https://www.cloudi-fi.com/)** | Cloud-based secure access and filtering platform with security-policy and internet-access use cases. | $1.50 / user / month (or ~$50.00 / site / month base access plan) | 30-day free trial (freemium option for 1 site under fair-use policy limits) |
-| **[Broadcom Symantec SSE](https://www.broadcom.com/products/cybersecurity/network-security)** | Enterprise cloud security portfolio covering secure web access, CASB, DLP and related security controls. | ~$3.50 / user / month ($42 / user / year starting tier for Web Security Service base suite) | 90-day free trial (enterprise Proof of Concept license via Broadcom Support Portal with Site ID) |
+- [☁️ SaaS & Hosted Platforms](#️-saas--hosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🛡️ Open-Source Zero Trust & ZTNA](#️-open-source-zero-trust--ztna)
+- [🌐 Open-Source Secure Web Gateway & Proxy](#-open-source-secure-web-gateway--proxy)
+- [🔒 Open-Source DNS & Network Security](#-open-source-dns--network-security)
+- [🔑 Open-Source Identity & Access Management (IAM)](#-open-source-identity--access-management-iam)
+- [📄 Open-Source DLP & Data Security](#-open-source-dlp--data-security)
+- [📊 Open-Source Security Monitoring & Analytics](#-open-source-security-monitoring--analytics)
+- [🔄 Commercial SSE → Open-Source Equivalents](#-commercial-sse--open-source-equivalents)
+- [🏗️ Frameworks for Building Custom SSE Systems](#️-frameworks-for-building-custom-sse-systems)
+- [📐 Reference Open-Source SSE Architecture](#-reference-open-source-sse-architecture)
+- [🎯 Recommended Open-Source SSE Stack](#-recommended-open-source-sse-stack)
+- [📊 SSE Capability Matrix](#-sse-capability-matrix)
+- [❓ What Is Still Difficult to Reproduce in Open Source?](#-what-is-still-difficult-to-reproduce-in-open-source)
+- [📈 Star History](#-star-history)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer](#️-disclaimer)
 
-## Open-Source GitHub Projects
+---
 
-> The projects below are **components and building blocks**, not claims of complete commercial-SSE parity. They can be combined to create a self-hosted SSE architecture.
+## ☁️ SaaS & Hosted Platforms
 
-* **[OpenZiti](https://github.com/openziti/ziti)**
-  Open-source zero-trust networking platform providing identity-based application access, encrypted connectivity and policy-driven segmentation. Particularly strong for ZTNA and private-application access. ([GitHub](https://github.com/openziti/ziti))
+> 📊 **Market Insights**: The global Security Service Edge (SSE) sector is estimated at **$9.5 Billion – $14.0 Billion** (projected to exceed ~$25B+ by 2030 at a CAGR of ~22–25%). The sector is **moderately fragmented**, actively transitioning from legacy point-solution appliances toward consolidated cloud-native SSE/SASE platforms led by cybersecurity market leaders and hyper-scaler ecosystems.
 
-* **[Pomerium](https://github.com/pomerium/pomerium)**
-  Identity- and context-aware access proxy for protecting internal applications without exposing them through a traditional corporate VPN. Supports policy-driven zero-trust application access. ([GitHub](https://github.com/pomerium/pomerium))
+The table below lists leading SaaS SSE vendors **sorted in descending order by company valuation / annual market capitalization**:
 
-* **[NetBird](https://github.com/netbirdio/netbird)**
-  Open-source WireGuard-based overlay networking platform with centralized access policies, SSO/MFA integrations and secure remote access. ([NetBird](https://netbird.io/))
+| Platform 🏢 | Description 📝 | Company Size / Valuation 💰 | Starting Pricing 💵 | Free Tier / Trial Limit 🎁 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Broadcom Symantec SSE](https://www.broadcom.com/products/cybersecurity/network-security)** | Enterprise cloud security portfolio covering secure web access, CASB, DLP and related security controls. | **~$800B+ Market Cap** (~$50B+ Rev) | ~$3.50 / user / month ($42 / user / year base Web Security Service suite) | 90-day free trial (enterprise Proof of Concept license via Broadcom Support Portal with Site ID) |
+| **[Cisco Secure Access / Cisco Umbrella](https://umbrella.cisco.com/)** | Cisco's SSE capabilities combine Secure Internet Access and Secure Private Access, with DNS security, SWG, CASB, DLP, malware protection and ZTNA capabilities. | **~$200B+ Market Cap** (~$53.8B Rev) | $2.25 / user / month (DNS Security Essentials starting tier; $4.00 / user / month for SIG) | 14-day free trial (standard self-service trial up to 50 users; 21 days for MSP partners) |
+| **[Palo Alto Networks Prisma Access](https://www.paloaltonetworks.com/sase/access)** | Cloud-delivered security platform combining secure access, SWG, ZTNA, cloud security, threat prevention and enterprise networking. | **~$115B+ Market Cap** (~$8.0B Rev) | ~$8.00 / user / month ($96 / user / year starting tier for base ZTNA/SWG package) | 30-day free trial (Ultimate Test Drive hands-on lab and guided PoC tenant evaluation) |
+| **[FortiSASE](https://www.fortinet.com/products/sase)** | Cloud-delivered SASE/SSE capabilities including SWG, ZTNA, CASB, FWaaS and endpoint/security integration. | **~$55B+ Market Cap** (~$5.3B Rev) | $7.50 / user / month ($90 / user / year starting tier for Standard package, min 50 users) | 30-day free trial (PoC tenant managed via Fortinet partner for minimum 50 user evaluation) |
+| **[Cloudflare One](https://www.cloudflare.com/zero-trust/)** | Zero Trust/SASE platform combining secure web access, private application access, DNS filtering, network security, browser isolation and data protection. | **~$30B+ Market Cap** (~$1.5B Rev) | $0 / month (Free tier) / $7.00 / user / month (Standard Pay-as-you-go tier) | Free forever for up to 50 users (includes ZTNA, SWG, WARP client, DEX, basic CASB/DLP, 24h log retention) |
+| **[Zscaler Zero Trust Exchange](https://www.zscaler.com/products/zero-trust-exchange)** | Cloud-native security platform providing secure internet and private-application access, SWG, CASB, DLP and zero-trust controls. | **~$28B+ Market Cap** (~$2.1B Rev) | ~$2.40 / user / month ($72 / user / year starting tier for ZIA Business package) | 90-day free trial (ZIA Cloud Sandbox/DLP evaluation, or 30-day PoC tenant with full feature access) |
+| **[Netskope One SSE](https://www.netskope.com/products/security-service-edge)** | Cloud-delivered SSE platform combining SWG, CASB, DLP, zero-trust access and threat protection with granular policy and data-centric controls. | **~$7.5B Valuation** (~$500M+ ARR) | ~$4.00 / user / month ($48 / user / year base SWG + CASB package) | 14-day free trial (Netskope Private Access Test Drive & PoV hands-on lab for up to 50 test users) |
+| **[Cato Networks](https://www.catonetworks.com/)** | Cloud-native SASE platform combining networking and security services including SWG, CASB, ZTNA, FWaaS and SD-WAN. | **~$3.1B Valuation** (~$200M+ ARR) | ~$6.00 / user / month (ZTNA SDP remote user starting tier) or ~$100.00 / site / month | 30-day free trial (Proof of Concept tenant with full SASE/SSE features enabled across all test sites) |
+| **[Forcepoint ONE](https://www.forcepoint.com/product/forcepoint-one)** | Cloud-native SSE platform focused on SWG, CASB, DLP, private application access and data-centric security. | **~$2.0B Valuation** (~$450M Rev) | ~$4.58 / user / month ($55 / user / year starting tier for cloud modules, min 100 users) | 30-day free trial (guided evaluation PoC environment for up to 100 test users) |
+| **[Skyhigh Security](https://www.skyhighsecurity.com/)** | SSE platform emphasizing SWG, CASB, DLP, zero-trust access, cloud security and data protection. | **~$1.8B Valuation** (~$300M Rev) | ~$5.00 / user / month ($60 / user / year starting tier for base Cloud Protection/SWG suite) | 14-day free trial (interactive guided PoC lab environment with pre-configured DLP & CASB policies) |
+| **[Lookout Secure Cloud Access / SSE](https://www.lookout.com/products/security-service-edge)** | Cloud security platform emphasizing secure access, data protection, DLP, CASB and zero-trust capabilities. | **~$1.0B Valuation** (~$120M Rev) | ~$4.00 / user / month (starting tier for base cloud access and mobile endpoint protection) | 90-day free trial (for Mobile Endpoint & Cloud Access evaluation up to 50 devices/users) |
+| **[Versa SASE](https://www.versa-networks.com/sase/)** | Integrated SASE/SSE platform combining SD-WAN, SWG, CASB, ZTNA, firewall and security analytics. | **~$1.0B Valuation** (~$100M ARR) | $7.50 / user / month (entry subscription tier for ZTNA and cloud security services) | 90-day free trial (evaluation tenant capped at up to 100 users or enterprise PoC trial) |
+| **[iboss](https://www.iboss.com/)** | Cloud-delivered SSE/SASE platform providing SWG, ZTNA, CASB, DLP and secure internet access. | **~$600M Valuation** (~$90M Rev) | ~$2.50 / user / month ($30 / user / year starting tier for Zero Trust Core package) | 30-day free trial (evaluation PoC license for cloud gateway & zero-trust access) |
+| **[Cloudi-Fi](https://www.cloudi-fi.com/)** | Cloud-based secure access and filtering platform with security-policy and internet-access use cases. | **~$75M Valuation** (~$15M Rev) | $1.50 / user / month (or ~$50.00 / site / month base access plan) | 30-day free trial (freemium option for 1 site under fair-use policy limits) |
 
-* **[Headscale](https://github.com/juanfont/headscale)**
-  Open-source, self-hosted implementation of the Tailscale control server for WireGuard-based private networks and identity-oriented connectivity. ([GitHub](https://github.com/juanfont/headscale))
+---
 
-* **[ThingsBoard](https://github.com/thingsboard/thingsboard)**
-  Open-source IoT platform that can provide device identity, telemetry, policy and secure-device-management components around an SSE architecture.
+## 💻 Open-Source GitHub Projects
 
-* **[E2Guardian](https://github.com/e2guardian/e2guardian)**
-  Open-source web content filtering proxy that can operate in proxy, transparent or ICAP modes. Useful as a secure web filtering component. ([GitHub](https://github.com/e2guardian/e2guardian))
+> **Building Block Principle**: While no single open-source project provides 1:1 feature parity with commercial SSE suites, an enterprise-grade open-source SSE stack is built by combining complementary building blocks (ZTNA, SWG, DNS, IAM, DLP, Monitoring).
 
-* **[Squid](https://github.com/squid-cache/squid)**
-  Mature open-source proxy/cache platform that can form the traffic-interception and policy-enforcement layer of a self-hosted secure web gateway.
+The table below lists top open-source projects **sorted in descending order by GitHub star count**:
 
-* **[Web Safety for Squid](https://github.com/diladele/websafety)**
-  Open-source web filtering and administration layer for Squid, including HTTPS filtering, URL/content controls and malware-scanning integrations. ([GitHub](https://github.com/diladele/websafety))
+| Repository 📦 | GitHub Stars 🌟 | Description & SSE Role 🚀 |
+| :--- | :--- | :--- |
+| **[Grafana](https://github.com/grafana/grafana)** | [<img src="https://img.shields.io/github/stars/grafana/grafana?style=social&color=white" alt="stars"/>](https://github.com/grafana/grafana/stargazers) | Operational dashboards and visualization for security metrics and logs. |
+| **[Prometheus](https://github.com/prometheus/prometheus)** | [<img src="https://img.shields.io/github/stars/prometheus/prometheus?style=social&color=white" alt="stars"/>](https://github.com/prometheus/prometheus/stargazers) | Systems monitoring and time-series alerting database. |
+| **[Traefik](https://github.com/traefik/traefik)** | [<img src="https://img.shields.io/github/stars/traefik/traefik?style=social&color=white" alt="stars"/>](https://github.com/traefik/traefik/stargazers) | Modern HTTP reverse proxy and load balancer for microservices. |
+| **[Pi-hole](https://github.com/pi-hole/pi-hole)** | [<img src="https://img.shields.io/github/stars/pi-hole/pi-hole?style=social&color=white" alt="stars"/>](https://github.com/pi-hole/pi-hole/stargazers) | DNS sinkhole for network-wide ad and threat domain blocking. |
+| **[Headscale](https://github.com/juanfont/headscale)** | [<img src="https://img.shields.io/github/stars/juanfont/headscale?style=social&color=white" alt="stars"/>](https://github.com/juanfont/headscale/stargazers) | Self-hosted control server for Tailscale WireGuard networks. |
+| **[Trivy](https://github.com/aquasecurity/trivy)** | [<img src="https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white" alt="stars"/>](https://github.com/aquasecurity/trivy/stargazers) | Comprehensive vulnerability, secret, and misconfiguration scanner. |
+| **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)** | [<img src="https://img.shields.io/github/stars/AdguardTeam/AdGuardHome?style=social&color=white" alt="stars"/>](https://github.com/AdguardTeam/AdGuardHome/stargazers) | Network-wide DNS server for blocking ads, tracking, and malicious domains. |
+| **[Keycloak](https://github.com/keycloak/keycloak)** | [<img src="https://img.shields.io/github/stars/keycloak/keycloak?style=social&color=white" alt="stars"/>](https://github.com/keycloak/keycloak/stargazers) | Open-source IAM, SSO, user federation, SAML/OIDC and fine-grained authorization. |
+| **[Tailscale](https://github.com/tailscale/tailscale)** | [<img src="https://img.shields.io/github/stars/tailscale/tailscale?style=social&color=white" alt="stars"/>](https://github.com/tailscale/tailscale/stargazers) | Cross-platform mesh VPN and zero-trust overlay network client. |
+| **[HashiCorp Vault](https://github.com/hashicorp/vault)** | [<img src="https://img.shields.io/github/stars/hashicorp/vault?style=social&color=white" alt="stars"/>](https://github.com/hashicorp/vault/stargazers) | Secrets management, encryption-as-a-service, and privileged access. |
+| **[Apache Kafka](https://github.com/apache/kafka)** | [<img src="https://img.shields.io/github/stars/apache/kafka?style=social&color=white" alt="stars"/>](https://github.com/apache/kafka/stargazers) | Distributed event-streaming platform for security logs. |
+| **[Gitleaks](https://github.com/gitleaks/gitleaks)** | [<img src="https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white" alt="stars"/>](https://github.com/gitleaks/gitleaks/stargazers) | SAST tool for detecting hardcoded secrets and sensitive credentials. |
+| **[NetBird](https://github.com/netbirdio/netbird)** | [<img src="https://img.shields.io/github/stars/netbirdio/netbird?style=social&color=white" alt="stars"/>](https://github.com/netbirdio/netbird/stargazers) | WireGuard-based overlay networking with centralized access policies & SSO/MFA. |
+| **[Envoy Proxy](https://github.com/envoyproxy/envoy)** | [<img src="https://img.shields.io/github/stars/envoyproxy/envoy?style=social&color=white" alt="stars"/>](https://github.com/envoyproxy/envoy/stargazers) | Cloud-native high-performance edge/service proxy. |
+| **[Authelia](https://github.com/authelia/authelia)** | [<img src="https://img.shields.io/github/stars/authelia/authelia?style=social&color=white" alt="stars"/>](https://github.com/authelia/authelia/stargazers) | Authentication and authorization server providing SSO, MFA, and passkeys. |
+| **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** | [<img src="https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white" alt="stars"/>](https://github.com/trufflesecurity/trufflehog/stargazers) | High-efficiency secret scanner for git repositories and filesystems. |
+| **[Authentik](https://github.com/goauthentik/authentik)** | [<img src="https://img.shields.io/github/stars/goauthentik/authentik?style=social&color=white" alt="stars"/>](https://github.com/goauthentik/authentik/stargazers) | Open-source identity provider integrating SSO, MFA, and user management. |
+| **[Cilium](https://github.com/cilium/cilium)** | [<img src="https://img.shields.io/github/stars/cilium/cilium?style=social&color=white" alt="stars"/>](https://github.com/cilium/cilium/stargazers) | eBPF-based networking, security, and observability for cloud native. |
+| **[Vector](https://github.com/vectordotdev/vector)** | [<img src="https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white" alt="stars"/>](https://github.com/vectordotdev/vector/stargazers) | High-performance observability data pipeline for log aggregation. |
+| **[ThingsBoard](https://github.com/thingsboard/thingsboard)** | [<img src="https://img.shields.io/github/stars/thingsboard/thingsboard?style=social&color=white" alt="stars"/>](https://github.com/thingsboard/thingsboard/stargazers) | IoT device management platform with security telemetry components. |
+| **[Teleport](https://github.com/gravitational/teleport)** | [<img src="https://img.shields.io/github/stars/gravitational/teleport?style=social&color=white" alt="stars"/>](https://github.com/gravitational/teleport/stargazers) | Identity-aware infrastructure and application access gateway. |
+| **[NATS Server](https://github.com/nats-io/nats-server)** | [<img src="https://img.shields.io/github/stars/nats-io/nats-server?style=social&color=white" alt="stars"/>](https://github.com/nats-io/nats-server/stargazers) | High-performance cloud-native messaging system. |
+| **[ORY Hydra](https://github.com/ory/hydra)** | [<img src="https://img.shields.io/github/stars/ory/hydra?style=social&color=white" alt="stars"/>](https://github.com/ory/hydra/stargazers) | API-first OAuth2 and OpenID Connect authorization server. |
+| **[Wazuh](https://github.com/wazuh/wazuh)** | [<img src="https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white" alt="stars"/>](https://github.com/wazuh/wazuh/stargazers) | Unified open-source XDR, SIEM, and endpoint security monitoring platform. |
+| **[Cloudflared](https://github.com/cloudflare/cloudflared)** | [<img src="https://img.shields.io/github/stars/cloudflare/cloudflared?style=social&color=white" alt="stars"/>](https://github.com/cloudflare/cloudflared/stargazers) | Cloudflare Tunnel client for secure ZTNA app exposure. |
+| **[CrowdSec](https://github.com/crowdsecurity/crowdsec)** | [<img src="https://img.shields.io/github/stars/crowdsecurity/crowdsec?style=social&color=white" alt="stars"/>](https://github.com/crowdsecurity/crowdsec/stargazers) | Open-source collaborative IPS and threat-detection engine. |
+| **[OpenVPN](https://github.com/OpenVPN/openvpn)** | [<img src="https://img.shields.io/github/stars/OpenVPN/openvpn?style=social&color=white" alt="stars"/>](https://github.com/OpenVPN/openvpn/stargazers) | Enterprise open-source VPN daemon and secure tunnel infrastructure. |
+| **[CoreDNS](https://github.com/coredns/coredns)** | [<img src="https://img.shields.io/github/stars/coredns/coredns?style=social&color=white" alt="stars"/>](https://github.com/coredns/coredns/stargazers) | Extensible DNS server useful for cloud policy and service discovery. |
+| **[ORY Kratos](https://github.com/ory/kratos)** | [<img src="https://img.shields.io/github/stars/ory/kratos?style=social&color=white" alt="stars"/>](https://github.com/ory/kratos/stargazers) | Cloud-native identity and user management system. |
+| **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** | [<img src="https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white" alt="stars"/>](https://github.com/opensearch-project/OpenSearch/stargazers) | Distributed search and security analytics engine. |
+| **[OPA](https://github.com/open-policy-agent/opa)** | [<img src="https://img.shields.io/github/stars/open-policy-agent/opa?style=social&color=white" alt="stars"/>](https://github.com/open-policy-agent/opa/stargazers) | General-purpose policy engine for unified policy enforcement across stacks. |
+| **[ModSecurity](https://github.com/owasp-modsecurity/ModSecurity)** | [<img src="https://img.shields.io/github/stars/owasp-modsecurity/ModSecurity?style=social&color=white" alt="stars"/>](https://github.com/owasp-modsecurity/ModSecurity/stargazers) | Open-source web application firewall (WAF) engine. |
+| **[Falco](https://github.com/falcosecurity/falco)** | [<img src="https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white" alt="stars"/>](https://github.com/falcosecurity/falco/stargazers) | Cloud-native runtime security and threat detection tool. |
+| **[Fluent Bit](https://github.com/fluent/fluent-bit)** | [<img src="https://img.shields.io/github/stars/fluent/fluent-bit?style=social&color=white" alt="stars"/>](https://github.com/fluent/fluent-bit/stargazers) | Fast and lightweight log and metrics processor/forwarder. |
+| **[Zeek](https://github.com/zeek/zeek)** | [<img src="https://img.shields.io/github/stars/zeek/zeek?style=social&color=white" alt="stars"/>](https://github.com/zeek/zeek/stargazers) | Network security monitoring framework providing detailed network telemetry. |
+| **[OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector)** | [<img src="https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white" alt="stars"/>](https://github.com/open-telemetry/opentelemetry-collector/stargazers) | Vendor-neutral telemetry collector for logs, metrics, and traces. |
+| **[OpenBao](https://github.com/openbao/openbao)** | [<img src="https://img.shields.io/github/stars/openbao/openbao?style=social&color=white" alt="stars"/>](https://github.com/openbao/openbao/stargazers) | Community-driven open-source secret management platform. |
+| **[ClamAV](https://github.com/Cisco-Talos/clamav)** | [<img src="https://img.shields.io/github/stars/Cisco-Talos/clamav?style=social&color=white" alt="stars"/>](https://github.com/Cisco-Talos/clamav/stargazers) | Open-source antivirus engine for file scanning and malware detection. |
+| **[HAProxy](https://github.com/haproxy/haproxy)** | [<img src="https://img.shields.io/github/stars/haproxy/haproxy?style=social&color=white" alt="stars"/>](https://github.com/haproxy/haproxy/stargazers) | Reliable, high-performance TCP/HTTP load balancer and proxy. |
+| **[Suricata](https://github.com/OISF/suricata)** | [<img src="https://img.shields.io/github/stars/OISF/suricata?style=social&color=white" alt="stars"/>](https://github.com/OISF/suricata/stargazers) | High-performance Network IDS, IPS, and network security monitoring engine. |
+| **[OpenFGA](https://github.com/openfga/openfga)** | [<img src="https://img.shields.io/github/stars/openfga/openfga?style=social&color=white" alt="stars"/>](https://github.com/openfga/openfga/stargazers) | Fine-grained relationship-based authorization engine inspired by Zanzibar. |
+| **[ORY Keto](https://github.com/ory/keto)** | [<img src="https://img.shields.io/github/stars/ory/keto?style=social&color=white" alt="stars"/>](https://github.com/ory/keto/stargazers) | First open-source implementation of Google Zanzibar Access Control. |
+| **[Pomerium](https://github.com/pomerium/pomerium)** | [<img src="https://img.shields.io/github/stars/pomerium/pomerium?style=social&color=white" alt="stars"/>](https://github.com/pomerium/pomerium/stargazers) | Identity- and context-aware access proxy for internal application zero-trust access. |
+| **[Tetragon](https://github.com/cilium/tetragon)** | [<img src="https://img.shields.io/github/stars/cilium/tetragon?style=social&color=white" alt="stars"/>](https://github.com/cilium/tetragon/stargazers) | eBPF-based security observability and runtime enforcement. |
+| **[Unbound](https://github.com/NLnetLabs/unbound)** | [<img src="https://img.shields.io/github/stars/NLnetLabs/unbound?style=social&color=white" alt="stars"/>](https://github.com/NLnetLabs/unbound/stargazers) | Validating, recursive, caching DNS resolver. |
+| **[WireGuard](https://github.com/WireGuard/wireguard-go)** | [<img src="https://img.shields.io/github/stars/WireGuard/wireguard-go?style=social&color=white" alt="stars"/>](https://github.com/WireGuard/wireguard-go/stargazers) | Lightweight, high-performance encrypted networking foundation. |
+| **[OpenZiti](https://github.com/openziti/ziti)** | [<img src="https://img.shields.io/github/stars/openziti/ziti?style=social&color=white" alt="stars"/>](https://github.com/openziti/ziti/stargazers) | Identity-based zero-trust networking platform providing app access & encrypted segmentation. |
+| **[Coraza WAF](https://github.com/corazawaf/coraza)** | [<img src="https://img.shields.io/github/stars/corazawaf/coraza?style=social&color=white" alt="stars"/>](https://github.com/corazawaf/coraza/stargazers) | Modern OWASP ModSecurity-compatible web application firewall engine in Go. |
+| **[Squid Proxy](https://github.com/squid-cache/squid)** | [<img src="https://img.shields.io/github/stars/squid-cache/squid?style=social&color=white" alt="stars"/>](https://github.com/squid-cache/squid/stargazers) | Caching and forwarding HTTP web proxy for secure traffic filtering. |
+| **[strongSwan](https://github.com/strongswan/strongswan)** | [<img src="https://img.shields.io/github/stars/strongswan/strongswan?style=social&color=white" alt="stars"/>](https://github.com/strongswan/strongswan/stargazers) | IPsec-based multi-platform VPN software. |
+| **[OpenSearch Dashboards](https://github.com/opensearch-project/OpenSearch-Dashboards)** | [<img src="https://img.shields.io/github/stars/opensearch-project/OpenSearch-Dashboards?style=social&color=white" alt="stars"/>](https://github.com/opensearch-project/OpenSearch-Dashboards/stargazers) | Visualization interface for OpenSearch security logs. |
+| **[E2Guardian](https://github.com/e2guardian/e2guardian)** | [<img src="https://img.shields.io/github/stars/e2guardian/e2guardian?style=social&color=white" alt="stars"/>](https://github.com/e2guardian/e2guardian/stargazers) | Open-source web content filtering proxy supporting ICAP and transparent mode. |
+| **[Web Safety for Squid](https://github.com/diladele/websafety)** | [<img src="https://img.shields.io/github/stars/diladele/websafety?style=social&color=white" alt="stars"/>](https://github.com/diladele/websafety/stargazers) | Web filtering and administration layer for Squid proxy with HTTPS inspection. |
 
-* **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)**
-  Open-source DNS server with network-wide blocking of advertisements and trackers; useful as a DNS-security/filtering component. ([GitHub](https://github.com/AdguardTeam/AdGuardHome))
+---
 
-* **[ModSecurity](https://github.com/owasp-modsecurity/ModSecurity)**
-  Open-source WAF engine capable of HTTP traffic inspection, monitoring and rule-based protection. ([GitHub](https://github.com/owasp-modsecurity/ModSecurity))
+## 🛡️ Open-Source Zero Trust & ZTNA
 
-* **[Keycloak](https://github.com/keycloak/keycloak)**
-  Open-source identity and access-management platform supporting SSO, user federation, strong authentication and fine-grained authorization. ([GitHub](https://github.com/keycloak/keycloak))
-
-* **[Authelia](https://github.com/authelia/authelia)**
-  Open-source authentication and authorization server providing SSO, MFA, WebAuthn/passkeys and fine-grained access rules for applications behind reverse proxies. ([GitHub](https://github.com/authelia/authelia))
-
-### Additional Strong Open-Source Options
-
-* **[OpenZiti](https://github.com/openziti/ziti)** — identity-based zero-trust networking and application segmentation.
-* **[Pomerium](https://github.com/pomerium/pomerium)** — identity-aware application access proxy.
-* **[NetBird](https://github.com/netbirdio/netbird)** — WireGuard-based zero-trust overlay networking.
-* **[Headscale](https://github.com/juanfont/headscale)** — self-hosted Tailscale control plane.
-* **[Teleport](https://github.com/gravitational/teleport)** — identity-aware infrastructure and application access.
-* **[OpenVPN](https://github.com/OpenVPN/openvpn)** — mature open-source VPN infrastructure.
-* **[WireGuard](https://github.com/WireGuard/wireguard-go)** — lightweight encrypted networking foundation.
-* **[strongSwan](https://github.com/strongswan/strongswan)** — IPsec/IKE VPN infrastructure.
-* **[Pomerium](https://github.com/pomerium/pomerium)** — BeyondCorp-style identity-aware proxy.
-* **[Authelia](https://github.com/authelia/authelia)** — MFA and authentication gateway.
-* **[Keycloak](https://github.com/keycloak/keycloak)** — IAM/SSO/authorization foundation.
-* **[ORY Hydra](https://github.com/ory/hydra)** — OAuth2/OpenID Connect authorization server.
-* **[ORY Kratos](https://github.com/ory/kratos)** — identity and user-management foundation.
-* **[Authentik](https://github.com/goauthentik/authentik)** — open-source identity provider and access-management platform.
-* **[E2Guardian](https://github.com/e2guardian/e2guardian)** — web content filtering.
-* **[Squid](https://github.com/squid-cache/squid)** — forward proxy/SWG foundation.
-* **[Privoxy](https://www.privoxy.org/)** — filtering proxy focused on privacy and web-content manipulation.
-* **[Web Safety for Squid](https://github.com/diladele/websafety)** — secure web filtering layer around Squid.
-* **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)** — DNS filtering and network-wide policy enforcement.
-* **[Pi-hole](https://github.com/pi-hole/pi-hole)** — DNS-based network filtering.
-* **[Unbound](https://github.com/NLnetLabs/unbound)** — validating, caching DNS resolver.
-* **[CoreDNS](https://github.com/coredns/coredns)** — extensible DNS server useful for policy and service discovery.
-* **[ModSecurity](https://github.com/owasp-modsecurity/ModSecurity)** — open-source WAF engine.
-* **[Coraza WAF](https://github.com/corazawaf/coraza)** — modern open-source WAF engine compatible with ModSecurity-style rules.
-* **[Suricata](https://github.com/OISF/suricata)** — IDS/IPS and network security monitoring.
-* **[Zeek](https://github.com/zeek/zeek)** — network security monitoring and traffic analysis.
-* **[Wazuh](https://github.com/wazuh/wazuh)** — endpoint security, SIEM and threat detection.
-* **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** — search and security analytics platform.
-* **[OpenSearch Dashboards](https://github.com/opensearch-project/OpenSearch-Dashboards)** — visualization for security telemetry.
-* **[Grafana](https://github.com/grafana/grafana)** — security and network observability dashboards.
-* **[Prometheus](https://github.com/prometheus/prometheus)** — metrics collection and alerting.
-* **[OpenTelemetry](https://github.com/open-telemetry/opentelemetry-collector)** — vendor-neutral telemetry collection and processing.
-* **[Vector](https://github.com/vectordotdev/vector)** — high-performance observability data pipeline.
-* **[Fluent Bit](https://github.com/fluent/fluent-bit)** — lightweight telemetry/log forwarding.
-* **[Apache Kafka](https://github.com/apache/kafka)** — distributed security-event streaming.
-* **[NATS](https://github.com/nats-io/nats-server)** — lightweight messaging infrastructure.
-* **[Cilium](https://github.com/cilium/cilium)** — eBPF-based networking, security and observability.
-* **[Tetragon](https://github.com/cilium/tetragon)** — eBPF-based security observability and enforcement.
-* **[Falco](https://github.com/falcosecurity/falco)** — runtime threat detection.
-* **[OPA](https://github.com/open-policy-agent/opa)** — general-purpose policy engine.
-* **[OpenFGA](https://github.com/openfga/openfga)** — fine-grained authorization engine.
-* **[ORY Keto](https://github.com/ory/keto)** — relationship-based authorization.
-* **[HashiCorp Vault](https://github.com/hashicorp/vault)** — secrets and identity-based security infrastructure.
-* **[Trivy](https://github.com/aquasecurity/trivy)** — vulnerability and configuration scanning.
-* **[ClamAV](https://github.com/Cisco-Talos/clamav)** — open-source antivirus engine useful for file scanning.
-* **[DLP](https://github.com/GoSecure/dlp)** — community projects and tooling for data-loss-prevention experimentation.
-* **[Gitleaks](https://github.com/gitleaks/gitleaks)** — secret detection and data-protection tooling.
-* **[OpenBao](https://github.com/openbao/openbao)** — open-source secrets-management platform.
-
-**Frameworks for building custom systems**: Combine **OpenZiti/Pomerium**, **Keycloak/Authelia**, **Squid + E2Guardian**, **AdGuard Home/Unbound**, **OPA/OpenFGA**, **Suricata/Zeek**, **Wazuh**, **Kafka**, and **OpenSearch + Grafana** to create a modular self-hosted SSE architecture.
-
-## Open-Source Zero Trust & ZTNA
-
-### OpenZiti
-
+### ⚡ OpenZiti
 **[OpenZiti](https://github.com/openziti/ziti)** is one of the strongest open-source foundations for building the **ZTNA/private-access portion** of an SSE platform.
-
-It provides:
-
-* Zero-trust networking
-* Cryptographic identity
-* Policy-controlled service access
-* Application segmentation
-* End-to-end encryption
-* Overlay networking
-* Host-level tunnelers
-* Application SDKs
-* Kubernetes connectivity
-* Multi-cloud connectivity
-* Self-hosted deployment
-
-OpenZiti supports network-, host- and application-level deployment models and is licensed under Apache 2.0. ([GitHub](https://github.com/openziti/ziti))
-
-### Pomerium
-
-**[Pomerium](https://github.com/pomerium/pomerium)** is particularly useful for browser-based ZTNA.
-
-It provides:
-
-* Identity-aware proxying
-* Context-aware access
-* Clientless application access
-* OIDC integration
-* Policy-based authorization
-* Internal application protection
-* Zero-trust access without traditional VPN exposure
-
-Pomerium is Apache-2.0 licensed. ([GitHub](https://github.com/pomerium/pomerium))
-
-### NetBird
-
-**[NetBird](https://github.com/netbirdio/netbird)** provides WireGuard-based private networking with centralized policy controls.
-
-Useful for:
-
-* Remote users
-* Hybrid cloud
-* Site-to-site access
-* Developer access
-* Edge devices
-* Zero-trust network segmentation
-
-([NetBird](https://netbird.io/))
-
-### Headscale
-
-**[Headscale](https://github.com/juanfont/headscale)** provides a self-hosted control server for Tailscale-compatible WireGuard networks.
-
-It is particularly useful where organizations want a self-hosted coordination/control plane for private overlay networking. ([GitHub](https://github.com/juanfont/headscale))
-
-## Open-Source Secure Web Gateway & Proxy
-
-### Squid
-
-**[Squid](https://github.com/squid-cache/squid)** remains one of the most important open-source proxy foundations.
-
-Potential SSE functions:
-
-* Forward proxy
-* HTTP/HTTPS traffic handling
-* Access control
-* Authentication
-* URL filtering integration
-* SSL inspection capabilities
-* ICAP integration
-* Logging
-
-### E2Guardian
-
-**[E2Guardian](https://github.com/e2guardian/e2guardian)** adds content filtering and policy enforcement.
-
-It supports:
-
-* URL filtering
-* Phrase filtering
-* File-type filtering
-* MIME filtering
-* Proxy mode
-* Transparent mode
-* ICAP mode
-
-([GitHub](https://github.com/e2guardian/e2guardian))
-
-### Web Safety
-
-**[Web Safety for Squid](https://github.com/diladele/websafety)** provides a more complete web-filtering layer around Squid.
-
-Its documented capabilities include HTTPS filtering, URL/content filtering, file scanning and group-based web controls. ([GitHub](https://github.com/diladele/websafety))
-
-## Open-Source DNS & Network Security
-
-### AdGuard Home
-
-**[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)** can provide network-wide DNS filtering.
-
-Useful for:
-
-* Malware domains
-* Tracking domains
-* Advertising domains
-* Policy-based DNS filtering
-* Enterprise/home-lab DNS security
-
-([GitHub](https://github.com/AdguardTeam/AdGuardHome))
-
-### Pi-hole
-
-**[Pi-hole](https://github.com/pi-hole/pi-hole)** provides DNS-based blocking and can be used as a basic DNS-policy component.
-
-### Unbound
-
-**[Unbound](https://github.com/NLnetLabs/unbound)** provides a validating, caching DNS resolver suitable for building secure DNS architectures.
-
-### CoreDNS
-
-**[CoreDNS](https://github.com/coredns/coredns)** provides an extensible DNS server and can be incorporated into Kubernetes, cloud and enterprise security architectures.
-
-## Open-Source Identity & Access Management
-
-### Keycloak
-
-**[Keycloak](https://github.com/keycloak/keycloak)** provides:
-
-* SSO
-* OAuth 2.0
-* OpenID Connect
-* SAML
-* User federation
-* MFA
-* Fine-grained authorization
-* Identity brokering
-
-([GitHub](https://github.com/keycloak/keycloak))
-
-### Authelia
-
-**[Authelia](https://github.com/authelia/authelia)** provides:
-
-* SSO
-* MFA
-* WebAuthn
-* Passkeys
-* OIDC
-* OAuth2
-* LDAP integration
-* Reverse-proxy authorization
-* Fine-grained access rules
-
-([GitHub](https://github.com/authelia/authelia))
-
-### Authentik
-
-**[Authentik](https://github.com/goauthentik/authentik)** provides an open-source identity provider and access-management platform suitable for authentication and SSO integration.
-
-### Open Policy Agent
-
-**[OPA](https://github.com/open-policy-agent/opa)** separates policy decisions from applications and infrastructure.
-
-It can be used for:
-
-* Access control
-* API authorization
-* Context-based policy
-* Infrastructure policy
-* Kubernetes policy
-
-## Open-Source DLP & Data Security
-
-A complete open-source equivalent to commercial SSE DLP engines is difficult to identify because enterprise DLP products combine:
-
-* Sensitive-data discovery
-* Exact-data matching
-* Fingerprinting
-* Classification
-* OCR
-* Endpoint controls
-* SaaS API inspection
-* Inline traffic inspection
-* User/entity context
-* Policy enforcement
-
-Nevertheless, the following projects can contribute to a custom data-security layer:
-
-* **[OpenDLP](https://github.com/ezarko/OpenDLP)** — open-source data-loss-prevention tooling.
-* **[Gitleaks](https://github.com/gitleaks/gitleaks)** — detects secrets and credentials in repositories and data.
-* **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** — secret and credential discovery.
-* **[ClamAV](https://github.com/Cisco-Talos/clamav)** — file/content malware scanning.
-* **[Apache Tika](https://github.com/apache/tika)** — content and document extraction useful for classification pipelines.
-* **[YARA](https://github.com/VirusTotal/yara)** — pattern-based file and malware identification.
-* **[OPA](https://github.com/open-policy-agent/opa)** — policy decision engine.
-* **[OpenFGA](https://github.com/openfga/openfga)** — fine-grained authorization.
-
-These should be viewed as **building blocks**, rather than drop-in replacements for the DLP engines of Netskope, Forcepoint, Skyhigh, Zscaler or Lookout.
-
-## Open-Source Security Monitoring & Analytics
-
-### Suricata
-
-**[Suricata](https://github.com/OISF/suricata)**
-
-Open-source IDS/IPS and network security monitoring engine.
-
-Useful for:
-
-* Threat detection
-* Deep packet inspection
-* Network signatures
-* Protocol analysis
-* Security telemetry
-
-### Zeek
-
-**[Zeek](https://github.com/zeek/zeek)**
-
-Powerful network security monitoring framework providing rich network metadata and behavioral analysis.
-
-### Wazuh
-
-**[Wazuh](https://github.com/wazuh/wazuh)**
-
-Open-source security monitoring platform covering:
-
-* Endpoint monitoring
-* Threat detection
-* File integrity
-* Vulnerability detection
-* Security analytics
-* SIEM functionality
-
-### OpenSearch
-
-**[OpenSearch](https://github.com/opensearch-project/OpenSearch)**
-
-Useful as a searchable security-data platform for:
-
-* Proxy logs
-* DNS events
-* ZTNA events
-* Authentication logs
-* DLP events
-* IDS/IPS telemetry
-
-### Grafana
-
-**[Grafana](https://github.com/grafana/grafana)**
-
-Useful for building operational security dashboards across:
-
-* SSE gateways
-* DNS
-* Proxy traffic
-* ZTNA
-* Network telemetry
-* Security alerts
-
-## Commercial SSE → Open-Source Equivalents
-
-| Commercial Platform                | Primary Capabilities                      | Strong Open-Source Building Blocks                        |
-| ---------------------------------- | ----------------------------------------- | --------------------------------------------------------- |
-| **Netskope One SSE**               | SWG + CASB + DLP + ZTNA                   | Squid + E2Guardian + OpenZiti + Keycloak + OPA + Suricata |
-| **Zscaler**                        | SWG + ZTNA + CASB + DLP                   | Squid + E2Guardian + OpenZiti + Pomerium + Keycloak       |
-| **Cisco Secure Access / Umbrella** | DNS + SWG + ZTNA + CASB + DLP             | AdGuard Home + Squid + OpenZiti + Keycloak + Suricata     |
-| **Palo Alto Prisma Access**        | SSE/SASE + SWG + ZTNA + threat prevention | OpenZiti + Squid + Suricata + OPA + Keycloak              |
-| **Cloudflare One**                 | Zero Trust + SWG + DNS + private access   | OpenZiti + Pomerium + AdGuard Home + Squid + Keycloak     |
-| **Cato Networks**                  | SASE + SWG + ZTNA + FWaaS                 | OpenZiti + NetBird + Squid + Suricata + OPA               |
-| **Forcepoint ONE**                 | SWG + CASB + DLP                          | Squid + E2Guardian + OPA + OpenDLP + ClamAV               |
-| **Skyhigh Security**               | SWG + CASB + DLP + ZTNA                   | Squid + OpenZiti + Keycloak + OPA + Suricata              |
-| **Versa SASE**                     | SD-WAN + SWG + ZTNA + firewall            | OpenZiti + NetBird + Squid + Suricata + OPA               |
-| **Lookout SSE**                    | ZTNA + CASB + DLP + cloud security        | OpenZiti + Pomerium + Keycloak + OPA + DLP tooling        |
-| **iboss**                          | Cloud SWG + ZTNA + DLP                    | Squid + E2Guardian + OpenZiti + OPA                       |
-| **FortiSASE**                      | SWG + ZTNA + firewall + CASB              | Squid + OpenZiti + Suricata + OPA                         |
-
-> **Important:** These are **functional/capability-oriented mappings**, not feature-for-feature replacements. Commercial SSE platforms integrate global cloud infrastructure, threat intelligence, DLP engines, identity context, policy management and managed operations that generally require multiple open-source components to reproduce.
-
-## Frameworks for Building Custom SSE Systems
-
-A practical open-source SSE architecture can be assembled as follows:
-
-| Layer              | Open-Source Technologies                   |
-| ------------------ | ------------------------------------------ |
-| Identity           | Keycloak · Authentik · Authelia            |
-| MFA                | Authelia · Keycloak · WebAuthn             |
-| ZTNA               | OpenZiti · Pomerium · NetBird              |
-| Overlay networking | WireGuard · NetBird · Headscale            |
-| Secure Web Gateway | Squid · E2Guardian                         |
-| HTTPS inspection   | Squid · Web Safety                         |
-| DNS security       | AdGuard Home · Pi-hole · Unbound · CoreDNS |
-| Policy             | OPA · OpenFGA                              |
-| WAF                | ModSecurity · Coraza                       |
-| IDS/IPS            | Suricata                                   |
-| Network monitoring | Zeek                                       |
-| Endpoint/SIEM      | Wazuh                                      |
-| Malware scanning   | ClamAV                                     |
-| Secrets            | OpenBao · Vault                            |
-| Event streaming    | Kafka · NATS                               |
-| Logs               | Fluent Bit · Vector                        |
-| Security analytics | OpenSearch                                 |
-| Dashboards         | Grafana · OpenSearch Dashboards            |
-| Metrics            | Prometheus                                 |
-| Telemetry          | OpenTelemetry                              |
-| Container security | Falco · Trivy                              |
-| Network security   | Cilium · Tetragon                          |
-| Automation         | Node-RED · n8n · Airflow                   |
-
-## Reference Open-Source SSE Architecture
+- Zero-trust overlay networking & identity-based application access
+- Cryptographic identity & policy-controlled service access
+- End-to-end encrypted connectivity & application SDKs
+- License: Apache-2.0
+
+### 🛡️ Pomerium
+**[Pomerium](https://github.com/pomerium/pomerium)** provides identity- and context-aware proxying for internal web applications.
+- Clientless web application access & OIDC integration
+- Context-aware policy enforcement without exposed VPN ports
+- License: Apache-2.0
+
+### 🦅 NetBird
+**[NetBird](https://github.com/netbirdio/netbird)** combines WireGuard overlay networking with centralized policy controls and SSO/MFA integrations.
+
+### 🌐 Headscale & Tailscale
+**[Headscale](https://github.com/juanfont/headscale)** offers an open-source, self-hosted control server for **[Tailscale](https://github.com/tailscale/tailscale)** clients.
+
+---
+
+## 🌐 Open-Source Secure Web Gateway & Proxy
+
+### 🦑 Squid & E2Guardian
+- **[Squid](https://github.com/squid-cache/squid)**: High-performance caching proxy serving as the forward proxy interception layer.
+- **[E2Guardian](https://github.com/e2guardian/e2guardian)**: Web content filtering engine with HTTPS inspection and ICAP support.
+- **[Web Safety for Squid](https://github.com/diladele/websafety)**: Administration and Web UI layer around Squid.
+
+### 🛡️ ModSecurity & Coraza WAF
+- **[ModSecurity](https://github.com/owasp-modsecurity/ModSecurity)**: Standard WAF engine for HTTP traffic inspection.
+- **[Coraza WAF](https://github.com/corazawaf/coraza)**: Enterprise-ready OWASP ModSecurity-compatible Go WAF engine.
+
+---
+
+## 🔒 Open-Source DNS & Network Security
+
+- **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)**: Network-wide DNS server for advertisement, malware, and tracker blocking.
+- **[Pi-hole](https://github.com/pi-hole/pi-hole)**: Lightweight DNS sinkhole for network security policy enforcement.
+- **[Unbound](https://github.com/NLnetLabs/unbound)**: High-performance validating, caching DNS resolver.
+- **[CoreDNS](https://github.com/coredns/coredns)**: Extensible DNS server written in Go, widely used in Kubernetes and cloud environments.
+
+---
+
+## 🔑 Open-Source Identity & Access Management (IAM)
+
+- **[Keycloak](https://github.com/keycloak/keycloak)**: Complete IAM solution providing SSO, OAuth2/OIDC, SAML, and user federation.
+- **[Authelia](https://github.com/authelia/authelia)**: Lightweight authentication gateway supporting SSO, MFA, and WebAuthn passkeys.
+- **[Authentik](https://github.com/goauthentik/authentik)**: Modern identity provider with flexible workflow pipeline builder.
+- **[OPA (Open Policy Agent)](https://github.com/open-policy-agent/opa)**: General-purpose policy engine for fine-grained authorization.
+
+---
+
+## 📄 Open-Source DLP & Data Security
+
+- **[Gitleaks](https://github.com/gitleaks/gitleaks)**: SAST secret scanner for credentials and sensitive data.
+- **[TruffleHog](https://github.com/trufflesecurity/trufflehog)**: High-efficiency secret scanner for filesystems and repositories.
+- **[ClamAV](https://github.com/Cisco-Talos/clamav)**: Antivirus engine for scanning uploads and transferred files.
+- **[HashiCorp Vault](https://github.com/hashicorp/vault)** / **[OpenBao](https://github.com/openbao/openbao)**: Secrets and key management infrastructure.
+
+---
+
+## 📊 Open-Source Security Monitoring & Analytics
+
+- **[Suricata](https://github.com/OISF/suricata)**: High-performance Network IDS/IPS engine.
+- **[Zeek](https://github.com/zeek/zeek)**: Deep network security monitoring and telemetry framework.
+- **[Wazuh](https://github.com/wazuh/wazuh)**: Endpoint security, SIEM, and vulnerability detection.
+- **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** & **[Grafana](https://github.com/grafana/grafana)**: Analytics indexing and dashboard visualization.
+
+---
+
+## 🔄 Commercial SSE → Open-Source Equivalents
+
+| Commercial Platform 🏢 | Primary Capabilities 🛠️ | Open-Source Building Blocks 🧩 |
+| :--- | :--- | :--- |
+| **Netskope One SSE** | SWG + CASB + DLP + ZTNA | Squid + E2Guardian + OpenZiti + Keycloak + OPA + Suricata |
+| **Zscaler Exchange** | SWG + ZTNA + CASB + DLP | Squid + E2Guardian + OpenZiti + Pomerium + Keycloak |
+| **Cisco Secure Access** | DNS + SWG + ZTNA + CASB | AdGuard Home + Squid + OpenZiti + Keycloak + Suricata |
+| **Palo Alto Prisma Access** | SASE + SWG + ZTNA + Threat Prev | OpenZiti + Squid + Suricata + OPA + Keycloak |
+| **Cloudflare One** | Zero Trust + SWG + DNS + ZTNA | OpenZiti + Pomerium + AdGuard Home + Squid + Keycloak |
+| **Cato Networks** | SASE + SWG + ZTNA + FWaaS | OpenZiti + NetBird + Squid + Suricata + OPA |
+| **Forcepoint ONE** | SWG + CASB + DLP | Squid + E2Guardian + OPA + Gitleaks + ClamAV |
+| **Skyhigh Security** | SWG + CASB + DLP + ZTNA | Squid + OpenZiti + Keycloak + OPA + Suricata |
+| **Versa SASE** | SD-WAN + SWG + ZTNA + Firewall | OpenZiti + NetBird + Squid + Suricata + OPA |
+| **Lookout SSE** | ZTNA + CASB + DLP + Mobile Sec | OpenZiti + Pomerium + Keycloak + OPA + TruffleHog |
+| **iboss** | Cloud SWG + ZTNA + DLP | Squid + E2Guardian + OpenZiti + OPA |
+| **FortiSASE** | SWG + ZTNA + Firewall + CASB | Squid + OpenZiti + Suricata + OPA |
+
+---
+
+## 🏗️ Frameworks for Building Custom SSE Systems
+
+| Architectural Layer 📐 | Open-Source Technologies 🛠️ |
+| :--- | :--- |
+| **Identity & IAM** | Keycloak · Authentik · Authelia |
+| **Multi-Factor Auth** | Authelia · Keycloak · WebAuthn Passkeys |
+| **ZTNA & Private Access** | OpenZiti · Pomerium · NetBird · Tailscale |
+| **Overlay Mesh Network** | WireGuard · NetBird · Headscale |
+| **Secure Web Gateway** | Squid Proxy · E2Guardian · Web Safety |
+| **DNS Filtering & Security** | AdGuard Home · Pi-hole · Unbound · CoreDNS |
+| **Policy Decision Engine** | OPA (Open Policy Agent) · OpenFGA · ORY Keto |
+| **WAF / Web Protection** | ModSecurity · Coraza WAF · Traefik |
+| **Network IDS/IPS** | Suricata · CrowdSec |
+| **Network Telemetry** | Zeek |
+| **Endpoint / XDR / SIEM** | Wazuh |
+| **DLP & Data Security** | Gitleaks · TruffleHog · ClamAV |
+| **Secrets Management** | OpenBao · HashiCorp Vault |
+| **Log & Event Pipeline** | Apache Kafka · Vector · Fluent Bit |
+| **Security Analytics** | OpenSearch · Grafana · Prometheus |
+
+---
+
+## 📐 Reference Open-Source SSE Architecture
 
 ```mermaid
 flowchart TB
-    U[Users / Devices / Remote Workers]
+    U[Users / Remote Workers / Edge Devices]
 
-    U --> I[Identity & MFA]
+    U --> I[Identity & MFA Gateway]
     I --> K[Keycloak / Authelia / Authentik]
 
-    U --> Z[ZTNA Layer]
+    U --> Z[ZTNA Private Access]
     Z --> Z1[OpenZiti]
     Z --> Z2[Pomerium]
-    Z --> Z3[NetBird]
+    Z --> Z3[NetBird / Headscale]
 
     U --> W[Secure Web Gateway]
-    W --> W1[Squid]
+    W --> W1[Squid Proxy]
     W --> W2[E2Guardian]
-    W --> W3[Web Safety]
 
-    U --> D[DNS Security]
+    U --> D[DNS Security Layer]
     D --> D1[AdGuard Home]
     D --> D2[Unbound]
-    D --> D3[CoreDNS]
 
-    W --> P[Policy Engine]
+    W --> P[Policy Decision Engine]
     Z --> P
     D --> P
     P --> OPA[OPA / OpenFGA]
 
-    W --> IDS[Network Security]
+    W --> IDS[Network Security & Threat Inspection]
     Z --> IDS
     IDS --> S[Suricata / Zeek]
 
-    W --> DL[Data Protection]
-    DL --> DLP[DLP / YARA / ClamAV]
+    W --> DL[Data Loss Prevention]
+    DL --> DLP[Gitleaks / TruffleHog / ClamAV]
 
-    S --> E[Security Events]
+    S --> E[Event Pipeline]
     DLP --> E
     K --> E
     W --> E
@@ -499,139 +290,76 @@ flowchart TB
 
     E --> Q[Kafka / NATS]
     Q --> SIEM[OpenSearch / Wazuh]
-    SIEM --> G[Grafana / Dashboards]
-
-    SIEM --> A[Security Analytics & Response]
+    SIEM --> G[Grafana Security Dashboards]
 ```
-
-## Recommended Open-Source SSE Stack
-
-For someone attempting to build a serious self-hosted SSE platform, a particularly strong starting architecture would be:
-
-**Identity**
-
-`Keycloak + Authelia`
-
-**ZTNA**
-
-`OpenZiti + Pomerium`
-
-**Secure Web Gateway**
-
-`Squid + E2Guardian`
-
-**DNS Security**
-
-`AdGuard Home + Unbound`
-
-**Policy**
-
-`OPA + OpenFGA`
-
-**Network Security**
-
-`Suricata + Zeek`
-
-**Data Protection**
-
-`YARA + ClamAV + Apache Tika + DLP tooling`
-
-**Security Analytics**
-
-`Wazuh + OpenSearch`
-
-**Telemetry**
-
-`OpenTelemetry + Prometheus`
-
-**Event Pipeline**
-
-`Kafka + Fluent Bit`
-
-**Visualization**
-
-`Grafana + OpenSearch Dashboards`
-
-This gives a modular architecture covering much of the SSE functional spectrum without requiring a proprietary cloud security platform.
-
-## SSE Capability Matrix
-
-| Capability                  | Commercial SSE | Strong Open-Source Options       |
-| --------------------------- | -------------: | -------------------------------- |
-| Secure Web Gateway          |              ✓ | Squid + E2Guardian               |
-| URL Filtering               |              ✓ | E2Guardian + Squid               |
-| DNS Security                |              ✓ | AdGuard Home + Unbound           |
-| ZTNA                        |              ✓ | OpenZiti + Pomerium              |
-| Private App Access          |              ✓ | OpenZiti + Pomerium              |
-| VPN Replacement             |              ✓ | OpenZiti + NetBird               |
-| Identity                    |              ✓ | Keycloak + Authentik             |
-| MFA                         |              ✓ | Keycloak + Authelia              |
-| CASB                        |              ✓ | Multiple components required     |
-| DLP                         |              ✓ | Multiple components required     |
-| Malware Scanning            |              ✓ | ClamAV + YARA                    |
-| IDS/IPS                     |              ✓ | Suricata                         |
-| Network Monitoring          |              ✓ | Zeek                             |
-| WAF                         |              ✓ | ModSecurity + Coraza             |
-| Policy Engine               |              ✓ | OPA + OpenFGA                    |
-| SIEM                        |              ✓ | Wazuh + OpenSearch               |
-| Security Analytics          |              ✓ | OpenSearch + Grafana             |
-| Device/Endpoint Security    |              ✓ | Wazuh + Falco                    |
-| Cloud-Native Networking     |              ✓ | Cilium                           |
-| eBPF Security               |              ✓ | Tetragon                         |
-| Observability               |              ✓ | OpenTelemetry + Prometheus       |
-| Global Security POPs        |              ✓ | Requires custom infrastructure   |
-| Vendor Threat Intelligence  |              ✓ | Must be assembled independently  |
-| Managed Security Operations |              ✓ | Requires in-house/MSP operations |
-
-## What Is Still Difficult to Reproduce in Open Source?
-
-The biggest gaps between an assembled open-source stack and commercial SSE platforms are generally:
-
-* Globally distributed security points of presence
-* Integrated commercial threat intelligence
-* Large-scale SSL inspection infrastructure
-* Mature SaaS application discovery
-* Enterprise CASB catalogs
-* Advanced inline DLP
-* Exact-data matching at scale
-* Enterprise endpoint posture integration
-* Managed browser isolation
-* Commercial RBI infrastructure
-* Unified policy management
-* Vendor-supported upgrades
-* Integrated security analytics
-* Enterprise support
-* Global SLA-backed operations
-
-Therefore, the strongest open-source approach is generally **compositional rather than monolithic**.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` following the existing format.
-3. Include: project name, GitHub/official link, 1–2 sentence description, and whether it is open-source or hosted.
-4. Prefer actively maintained projects.
-5. Clearly distinguish **complete platforms** from **individual SSE building blocks**.
-6. Include license information when known.
-7. Submit a PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-* This is a **community-curated** list — not exhaustive and not an endorsement.
-* Commercial products and trademarks belong to their respective owners.
-* Open-source projects listed here are not necessarily complete replacements for commercial SSE platforms.
-* Security capabilities vary considerably between projects.
-* Some projects provide only one component of an SSE architecture.
-* Licensing should always be checked against the current project release.
-* Self-hosted SSE deployments require professional security architecture, monitoring, patching, certificate management and incident response.
-* TLS interception, traffic inspection and employee/user monitoring must comply with applicable privacy, employment and cybersecurity laws.
-* Production deployments should undergo penetration testing, threat modeling and independent security review.
-* Do not expose administrative interfaces or security infrastructure directly to the public Internet without appropriate controls.
 
 ---
 
-**Made for security architects, CISOs, network engineers, cloud engineers, DevSecOps teams, researchers, and organizations building open and self-hosted Security Service Edge infrastructure.**
-Let's make SSE more open, interoperable, transparent, and accessible without sacrificing zero-trust security.
+## 🎯 Recommended Open-Source SSE Stack
 
+For teams building a production self-hosted SSE stack, the recommended component combination is:
+- **Identity**: `Keycloak + Authelia`
+- **ZTNA**: `OpenZiti + Pomerium`
+- **Secure Web Gateway**: `Squid + E2Guardian`
+- **DNS Security**: `AdGuard Home + Unbound`
+- **Policy Engine**: `OPA + OpenFGA`
+- **Network Security**: `Suricata + Zeek`
+- **Data Protection**: `Gitleaks + TruffleHog + ClamAV`
+- **SIEM & Analytics**: `Wazuh + OpenSearch + Grafana`
+
+---
+
+## 📊 SSE Capability Matrix
+
+| Capability 🛠️ | Commercial SSE ☁️ | Open-Source Equivalent Stack 💻 |
+| :--- | :---: | :--- |
+| Secure Web Gateway | ✓ | Squid + E2Guardian |
+| URL Content Filtering | ✓ | E2Guardian + Squid |
+| DNS Security | ✓ | AdGuard Home + Unbound |
+| ZTNA & Private App Access | ✓ | OpenZiti + Pomerium |
+| VPN Replacement Overlay | ✓ | OpenZiti + NetBird |
+| Identity & IAM | ✓ | Keycloak + Authentik |
+| Multi-Factor Authentication | ✓ | Keycloak + Authelia |
+| Data Loss Prevention | ✓ | Gitleaks + TruffleHog + ClamAV |
+| Malware Inspection | ✓ | ClamAV + Suricata |
+| Network IDS/IPS | ✓ | Suricata |
+| Network Telemetry | ✓ | Zeek |
+| WAF / Threat Prevention | ✓ | ModSecurity + Coraza |
+| Policy Decision Engine | ✓ | OPA + OpenFGA |
+| SIEM & XDR | ✓ | Wazuh + OpenSearch |
+| Observability Dashboards | ✓ | OpenSearch + Grafana |
+
+---
+
+## ❓ What Is Still Difficult to Reproduce in Open Source?
+
+While building blocks exist for individual security modules, commercial SSE suites still offer advantages in:
+- Globally distributed security Points of Presence (POPs)
+- Real-time global threat intelligence integration
+- Scalable inline SSL/TLS inspection at enterprise scale
+- Turnkey Cloud Access Security Broker (CASB) application catalogs
+- Enterprise-wide managed Browser Isolation (RBI) infrastructure
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Secure-Service-Edge&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Secure-Service-Edge&type=date&legend=top-left)
+
+---
+
+## 🤝 How to Contribute
+
+1. Fork this repository.
+2. Add/edit entries in `README.md` following the tabular layout.
+3. Check out the list of awesome lists at **[Awesome Awesome Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)**.
+4. Ensure entries include project name, official GitHub repository link, star count badge, and accurate description.
+5. Submit a pull request with a concise title and summary!
+
+---
+
+## ⚠️ Disclaimer
+
+- This list is **community-curated** for educational, architectural, and security evaluation purposes.
+- Commercial trademarks belong to their respective owners.
+- Self-hosted SSE implementations require professional security architecture, monitoring, certificate management, and compliance reviews.
