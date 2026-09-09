@@ -32,47 +32,22 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-* **[Netskope One SSE](https://www.netskope.com/products/security-service-edge)**
-  Cloud-delivered SSE platform combining SWG, CASB, DLP, zero-trust access and threat protection with granular policy and data-centric controls. ([Netskope](https://www.netskope.com/products/security-service-edge))
-
-* **[Zscaler Zero Trust Exchange](https://www.zscaler.com/products/zero-trust-exchange)**
-  Cloud-native security platform providing secure internet and private-application access, SWG, CASB, DLP and zero-trust controls.
-
-* **[Cisco Secure Access / Cisco Umbrella](https://umbrella.cisco.com/)**
-  Cisco's SSE capabilities combine Secure Internet Access and Secure Private Access, with DNS security, SWG, CASB, DLP, malware protection and ZTNA capabilities. ([Cisco Umbrella](https://umbrella.cisco.com/))
-
-* **[Palo Alto Networks Prisma Access](https://www.paloaltonetworks.com/sase/access)**
-  Cloud-delivered security platform combining secure access, SWG, ZTNA, cloud security, threat prevention and enterprise networking.
-
-* **[Cloudflare One](https://www.cloudflare.com/zero-trust/)**
-  Zero Trust/SASE platform combining secure web access, private application access, DNS filtering, network security, browser isolation and data protection.
-
-* **[Cato Networks](https://www.catonetworks.com/)**
-  Cloud-native SASE platform combining networking and security services including SWG, CASB, ZTNA, FWaaS and SD-WAN.
-
-* **[Forcepoint ONE](https://www.forcepoint.com/product/forcepoint-one)**
-  Cloud-native SSE platform focused on SWG, CASB, DLP, private application access and data-centric security.
-
-* **[Skyhigh Security](https://www.skyhighsecurity.com/)**
-  SSE platform emphasizing SWG, CASB, DLP, zero-trust access, cloud security and data protection.
-
-* **[Versa SASE](https://www.versa-networks.com/sase/)**
-  Integrated SASE/SSE platform combining SD-WAN, SWG, CASB, ZTNA, firewall and security analytics.
-
-* **[Lookout Secure Cloud Access / SSE](https://www.lookout.com/products/security-service-edge)**
-  Cloud security platform emphasizing secure access, data protection, DLP, CASB and zero-trust capabilities.
-
-* **[iboss](https://www.iboss.com/)**
-  Cloud-delivered SSE/SASE platform providing SWG, ZTNA, CASB, DLP and secure internet access.
-
-* **[FortiSASE](https://www.fortinet.com/products/sase)**
-  Cloud-delivered SASE/SSE capabilities including SWG, ZTNA, CASB, FWaaS and endpoint/security integration.
-
-* **[Cloudi-Fi](https://www.cloudi-fi.com/)**
-  Cloud-based secure access and filtering platform with security-policy and internet-access use cases.
-
-* **[Broadcom Symantec SSE](https://www.broadcom.com/products/cybersecurity/network-security)**
-  Enterprise cloud security portfolio covering secure web access, CASB, DLP and related security controls.
+| Platform | Description | Starting Pricing | Free Tier / Trial Limit |
+| :--- | :--- | :--- | :--- |
+| **[Netskope One SSE](https://www.netskope.com/products/security-service-edge)** | Cloud-delivered SSE platform combining SWG, CASB, DLP, zero-trust access and threat protection with granular policy and data-centric controls. | ~$4.00 / user / month ($48 / user / year base SWG + CASB package) | 14-day free trial (Netskope Private Access Test Drive & PoV hands-on lab for up to 50 test users) |
+| **[Zscaler Zero Trust Exchange](https://www.zscaler.com/products/zero-trust-exchange)** | Cloud-native security platform providing secure internet and private-application access, SWG, CASB, DLP and zero-trust controls. | ~$2.40 / user / month ($72 / user / year starting tier for ZIA Business package) | 90-day free trial (ZIA Cloud Sandbox/DLP evaluation, or 30-day PoC tenant with full feature access) |
+| **[Cisco Secure Access / Cisco Umbrella](https://umbrella.cisco.com/)** | Cisco's SSE capabilities combine Secure Internet Access and Secure Private Access, with DNS security, SWG, CASB, DLP, malware protection and ZTNA capabilities. | $2.25 / user / month (DNS Security Essentials starting tier; $4.00 / user / month for SIG) | 14-day free trial (standard self-service trial up to 50 users; 21 days for MSP partners) |
+| **[Palo Alto Networks Prisma Access](https://www.paloaltonetworks.com/sase/access)** | Cloud-delivered security platform combining secure access, SWG, ZTNA, cloud security, threat prevention and enterprise networking. | ~$8.00 / user / month ($96 / user / year starting tier for base ZTNA/SWG package) | 30-day free trial (Ultimate Test Drive hands-on lab and guided PoC tenant evaluation) |
+| **[Cloudflare One](https://www.cloudflare.com/zero-trust/)** | Zero Trust/SASE platform combining secure web access, private application access, DNS filtering, network security, browser isolation and data protection. | $0 / month (Free tier) / $7.00 / user / month (Standard Pay-as-you-go tier) | Free forever for up to 50 users (includes ZTNA, SWG, WARP client, DEX, basic CASB/DLP, 24h log retention) |
+| **[Cato Networks](https://www.catonetworks.com/)** | Cloud-native SASE platform combining networking and security services including SWG, CASB, ZTNA, FWaaS and SD-WAN. | ~$6.00 / user / month (ZTNA SDP remote user starting tier) or ~$100.00 / site / month | 30-day free trial (Proof of Concept tenant with full SASE/SSE features enabled across all test sites) |
+| **[Forcepoint ONE](https://www.forcepoint.com/product/forcepoint-one)** | Cloud-native SSE platform focused on SWG, CASB, DLP, private application access and data-centric security. | ~$4.58 / user / month ($55 / user / year starting tier for cloud modules, min 100 users) | 30-day free trial (guided evaluation PoC environment for up to 100 test users) |
+| **[Skyhigh Security](https://www.skyhighsecurity.com/)** | SSE platform emphasizing SWG, CASB, DLP, zero-trust access, cloud security and data protection. | ~$5.00 / user / month ($60 / user / year starting tier for base Cloud Protection/SWG suite) | 14-day free trial (interactive guided PoC lab environment with pre-configured DLP & CASB policies) |
+| **[Versa SASE](https://www.versa-networks.com/sase/)** | Integrated SASE/SSE platform combining SD-WAN, SWG, CASB, ZTNA, firewall and security analytics. | $7.50 / user / month (entry subscription tier for ZTNA and cloud security services) | 90-day free trial (evaluation tenant capped at up to 100 users or enterprise PoC trial) |
+| **[Lookout Secure Cloud Access / SSE](https://www.lookout.com/products/security-service-edge)** | Cloud security platform emphasizing secure access, data protection, DLP, CASB and zero-trust capabilities. | ~$4.00 / user / month (starting tier for base cloud access and mobile endpoint protection) | 90-day free trial (for Mobile Endpoint & Cloud Access evaluation up to 50 devices/users) |
+| **[iboss](https://www.iboss.com/)** | Cloud-delivered SSE/SASE platform providing SWG, ZTNA, CASB, DLP and secure internet access. | ~$2.50 / user / month ($30 / user / year starting tier for Zero Trust Core package) | 30-day free trial (evaluation PoC license for cloud gateway & zero-trust access) |
+| **[FortiSASE](https://www.fortinet.com/products/sase)** | Cloud-delivered SASE/SSE capabilities including SWG, ZTNA, CASB, FWaaS and endpoint/security integration. | $7.50 / user / month ($90 / user / year starting tier for Standard package, min 50 users) | 30-day free trial (PoC tenant managed via Fortinet partner for minimum 50 user evaluation) |
+| **[Cloudi-Fi](https://www.cloudi-fi.com/)** | Cloud-based secure access and filtering platform with security-policy and internet-access use cases. | $1.50 / user / month (or ~$50.00 / site / month base access plan) | 30-day free trial (freemium option for 1 site under fair-use policy limits) |
+| **[Broadcom Symantec SSE](https://www.broadcom.com/products/cybersecurity/network-security)** | Enterprise cloud security portfolio covering secure web access, CASB, DLP and related security controls. | ~$3.50 / user / month ($42 / user / year starting tier for Web Security Service base suite) | 90-day free trial (enterprise Proof of Concept license via Broadcom Support Portal with Site ID) |
 
 ## Open-Source GitHub Projects
 
